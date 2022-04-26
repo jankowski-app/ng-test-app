@@ -11,24 +11,35 @@ import {MatMenuModule} from "@angular/material/menu";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatIconModule} from "@angular/material/icon";
+import {ApiDbService} from "./services/api-db.service";
+import {HttpClientModule} from "@angular/common/http";
+import { UserTabListsComponent } from './user-tab-lists/user-tab-lists.component';
+import {MatCardModule} from "@angular/material/card";
+import {MatTabsModule} from "@angular/material/tabs";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    UsersComponent
+    UsersComponent,
+    UserTabListsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatMenuModule,
     MatToolbarModule,
     MatSidenavModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule,
+    MatTabsModule
   ],
-  providers: [],
+  providers: [
+    ApiDbService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

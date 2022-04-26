@@ -1,1 +1,21 @@
-<p>users works!</p>
+<h1>Users component works!</h1>
+<mat-tab-group>
+  <mat-tab label="Active">
+    <app-user-tab-lists [users]="isActiveUser | async"></app-user-tab-lists>
+  </mat-tab>
+  <mat-tab label="No-Active">
+    <app-user-tab-lists [users]="isNoActiveUser| async"></app-user-tab-lists>
+  </mat-tab>
+</mat-tab-group>
+
+<!--<div *ngIf="isActiveUser | async as users">-->
+<!--      <pre>-->
+<!--    {{users | json}}-->
+<!--  </pre>-->
+<!--</div>-->
+
+<!--<div *ngIf="isNoActiveUser | async as users">-->
+<!--      <pre>-->
+<!--    {{users | json}}-->
+<!--  </pre>-->
+<!--</div>-->
